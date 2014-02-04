@@ -6,7 +6,7 @@
 var net = require('net');
 
 var client = function() {
-  var socket = net.createConnection(7326, process.ARGV[2]);
+  var socket = net.createConnection(7326, process.argv[2]);
 
   socket.setEncoding("utf8");
 
@@ -25,7 +25,7 @@ var client = function() {
   }
 }
 
-if (!process.ARGV[2]) {
+if (!process.argv[2]) {
   console.log("usage: icb.js <server>");
   process.exit(2);
 }
